@@ -1,0 +1,63 @@
+version: '4.34.3'
+
+networks:
+  bachelor-network:
+    driver: bridge
+    external: true
+
+services:
+  next:
+    build: 
+      context: ./SSR
+    working_dir: /app
+    volumes:
+      - ./SSR:/app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+    networks:
+      - bachelor-network
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:5000
+
+  react:
+    build: 
+      context: ./CSR
+    working_dir: /app
+    volumes:
+      - ./CSR:/app
+    ports:
+      - '3001:3001'
+    depends_on:
+      - backend
+    networks:
+      - bachelor-network
+    environment:
+      - REACT_APP_API_URL=http://backend:5000
+
+  backend:
+    build: 
+      context: ./BE
+    working_dir: /app
+    volumes:
+      - ./BE:/app
+    ports:
+      - '5015:5015'
+    depends_on:
+      - mongodb
+    networks:
+      - bachelor-network
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/mydatabase
+      - PORT=5015
+
+  mongodb:
+    image: mongo:5
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
