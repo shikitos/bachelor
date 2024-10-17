@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 3001
 
 # Start the React development server
-CMD ["pnpm", "build"]
+CMD ["pnpm", "dev"]

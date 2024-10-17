@@ -1,19 +1,21 @@
 {
-  "name": "BE",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon",
+    "seed:posts": "ts-node ./src/seeders/posts.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "mongoose": "^8.7.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.5",
     "nodemon": "^3.1.7",
