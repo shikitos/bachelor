@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, Document } from 'mongoose';
 
 export type PostType = Document & {
   title: string;
@@ -14,4 +14,4 @@ const PostSchema = new Schema<PostType>({
   image: { type: String, required: true },
 });
 
-export default mongoose.model<PostType>("Post", PostSchema);
+export default mongoose.model<PostType>('Post', PostSchema);

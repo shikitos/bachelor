@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return (
@@ -31,7 +31,9 @@ export const Home = () => {
                 <Link to="/ux/interaction">Время отклика на действия</Link>
               </li>
               <li>
-                <Link to="/ux/dynamic-loading">Динамическая загрузка компонентов</Link>
+                <Link to="/ux/dynamic-loading">
+                  Динамическая загрузка компонентов
+                </Link>
               </li>
             </ul>
           </li>

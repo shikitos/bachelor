@@ -1,1 +1,1 @@
-export * from "./FCP";
+export * from './FCP';

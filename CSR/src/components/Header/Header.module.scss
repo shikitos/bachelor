@@ -1,6 +1,40 @@
+@use 'styles/variables' as *;
+
 .header {
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
   &-nav {
     display: flex;
     gap: 18px;
+    align-items: center;
+    &__link {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      color: #fff;
+      padding: 8px 12px;
+      &:hover {
+        color: #fff;
+      }
+    }
+    & > a {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      font-weight: 500;
+      font-family: inherit;
+      background-color: #1a1a1a;
+      cursor: pointer;
+      transition: border-color 0.25s;
+      &:hover {
+        border-color: #646cff;
+      }
+      &:focus,
+      &:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+      }
+    }
   }
 }

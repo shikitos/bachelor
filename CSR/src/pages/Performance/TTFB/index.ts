@@ -1,1 +1,1 @@
-export * from "./TTFB";
+export * from './TTFB';

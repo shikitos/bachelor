@@ -1,1 +1,1 @@
-export * from "./TTI";
+export * from './TTI';

@@ -1,2 +1,2 @@
-export * from "./Indexing";
-export * from "./Ranking";
+export * from './Indexing';
+export * from './Ranking';

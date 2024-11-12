@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import Post, { PostType } from "../models/Post";
+import { Request, Response } from 'express';
+import Post, { PostType } from '../models/Post';
 
 export const getPosts = async (req: Request, res: Response) => {
   const page = parseInt(req.query.page as string) || 1;
@@ -18,7 +18,7 @@ export const getPosts = async (req: Request, res: Response) => {
 export const getPostById = async (req: Request, res: Response) => {
   try {
     const post: PostType | null = await Post.findById(req.params.id);
-    if (!post) return res.status(404).json({ message: "Post not found" });
+    if (!post) return res.status(404).json({ message: 'Post not found' });
     res.json(post);
   } catch (err) {
     res.status(500).json({ message: err.message });
