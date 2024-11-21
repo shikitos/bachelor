@@ -1,4 +1,5 @@
 packages:
-  - "BE"
-  - "CSR"
-  - "SSR"
+  - 'UI'
+  - 'BE'
+  - 'CSR'
+  - 'SSR'

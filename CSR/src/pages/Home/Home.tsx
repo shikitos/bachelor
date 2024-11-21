@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+import { Button } from 'ui';
 
 export const Home = () => {
   return (
     <main>
       <h1>Bachelor Project</h1>
+      <Button>Click me</Button>
       <section>
         <h2>Available Pages</h2>
         <ul>
