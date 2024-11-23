@@ -1,0 +1,29 @@
+{
+  "home": {
+    "title": "Domovská stránka",
+    "subtitle": "Vítejte na domovské stránce"
+  },
+  "routes": {
+    "Home": "Vítejte na domovské stránce",
+    "Performance": "Stránky týkající se výkonu",
+    "Animations": "Stránka s animacemi",
+    "ClientCalculations": "Stránka s výpočty na straně klienta",
+    "ComplexForms": "Stránka s komplexními formuláři",
+    "DynamicContent": "Stránka s dynamickým obsahem",
+    "HeavyJSBundles": "Stránka s velkými JavaScriptovými balíčky",
+    "ImageLoad": "Stránka s načítáním obrázků",
+    "InteractiveMedia": "Stránka s interaktivními médii",
+    "LargeDOM": "Stránka s velkým DOM",
+    "UX": "Stránky týkající se uživatelské zkušenosti",
+    "Interaction": "Stránka s interakcí",
+    "DynamicLoading": "Stránka s dynamickým načítáním",
+    "SEO": "Stránky týkající se optimalizace pro vyhledávače",
+    "Indexing": "Stránka s indexováním",
+    "Ranking": "Stránka s hodnocením",
+    "Data": "Stránky týkající se dat",
+    "Caching": "Stránka s ukládáním do mezipaměti",
+    "Rendering": "Stránka s vykreslováním",
+    "Resources": "Stránka se zdroji",
+    "NotFound": "Stránka nenalezena"
+  }
+}

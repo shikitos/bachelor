@@ -1,11 +1,23 @@
 import { createBrowserRouter } from 'react-router-dom';
+
+import { Caching, Rendering } from './Data';
 import { Home } from './Home';
 import { Layout } from './Layout';
-import { FCP, FMP, TTFB, TTI } from './Performance';
-import { DynamicLoading, Interaction } from './UX';
-import { Indexing, Ranking } from './SEO';
-import { Caching, Rendering } from './Data';
+import { NotFound } from './NotFound';
+import {
+  Animations,
+  ClientCalculations,
+  ComplexForms,
+  DynamicContent,
+  HeavyJSBundles,
+  ImageLoad,
+  InteractiveMedia,
+  LargeDOM,
+  PerformanceLayout,
+} from './Performance';
 import { Resources } from './Resources';
+import { Indexing, Ranking } from './SEO';
+import { DynamicLoading, Interaction } from './UX';
 
 export const router = createBrowserRouter([
   {
@@ -19,26 +31,48 @@ export const router = createBrowserRouter([
       {
         path: '/performance',
         id: 'Performance',
+        element: <PerformanceLayout />,
         children: [
           {
-            path: 'ttfb',
-            id: 'TTFB',
-            element: <TTFB />,
+            path: 'animations',
+            id: 'Animations',
+            element: <Animations />,
           },
           {
-            path: 'fcp',
-            id: 'FCP',
-            element: <FCP />,
+            path: 'client-calculations',
+            id: 'ClientCalculations',
+            element: <ClientCalculations />,
           },
           {
-            path: 'fmp',
-            id: 'FMP',
-            element: <FMP />,
+            path: 'complex-forms',
+            id: 'ComplexForms',
+            element: <ComplexForms />,
           },
           {
-            path: 'tti',
-            id: 'TTI',
-            element: <TTI />,
+            path: 'dynamic-content',
+            id: 'DynamicContent',
+            element: <DynamicContent />,
+          },
+          {
+            path: 'heavy-js-bundles',
+            id: 'HeavyJSBundles',
+            element: <HeavyJSBundles />,
+          },
+
+          {
+            path: 'image-load',
+            id: 'ImageLoad',
+            element: <ImageLoad />,
+          },
+          {
+            path: 'interactive-media',
+            id: 'InteractiveMedia',
+            element: <InteractiveMedia />,
+          },
+          {
+            path: 'large-dom',
+            id: 'LargeDOM',
+            element: <LargeDOM />,
           },
         ],
       },
@@ -94,6 +128,11 @@ export const router = createBrowserRouter([
         path: '/resources',
         id: 'Resources',
         element: <Resources />,
+      },
+      {
+        path: '*',
+        id: 'NotFound',
+        element: <NotFound />,
       },
     ],
   },

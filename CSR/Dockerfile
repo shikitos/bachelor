@@ -2,14 +2,13 @@ FROM node:20
 
 WORKDIR /app
 
-COPY pnpm-lock.yaml ./
-COPY package.json ./
+COPY pnpm-lock.yaml package.json ./
 
 RUN npm install -g pnpm
 
-COPY . .
+RUN pnpm install
 
-RUN pnpm install --frozen-lockfile 
+COPY . .
 
 EXPOSE 3001
 

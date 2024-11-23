@@ -4,13 +4,13 @@ networks:
     external: true
 
 services:
-
   next:
     build:
       context: ./SSR
     working_dir: /app
     volumes:
       - ./SSR:/app
+      - /app/node_modules
     ports:
       - "3000:3000"
     depends_on:
@@ -26,6 +26,7 @@ services:
     working_dir: /app
     volumes:
       - ./CSR:/app
+      - /app/node_modules
     ports:
       - "3001:3001"
     depends_on:

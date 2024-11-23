@@ -1,0 +1,29 @@
+{
+  "home": {
+    "title": "Home",
+    "subtitle": "Welcome to the Home page"
+  },
+  "routes": {
+    "Home": "Welcome to the Home page",
+    "Performance": "Performance related pages",
+    "Animations": "Animations page",
+    "ClientCalculations": "Client-side calculations page",
+    "ComplexForms": "Complex forms page",
+    "DynamicContent": "Dynamic content page",
+    "HeavyJSBundles": "Heavy JavaScript bundles page",
+    "ImageLoad": "Image loading page",
+    "InteractiveMedia": "Interactive media page",
+    "LargeDOM": "Large DOM page",
+    "UX": "User Experience related pages",
+    "Interaction": "Interaction page",
+    "DynamicLoading": "Dynamic loading page",
+    "SEO": "Search Engine Optimization related pages",
+    "Indexing": "Indexing page",
+    "Ranking": "Ranking page",
+    "Data": "Data related pages",
+    "Caching": "Caching page",
+    "Rendering": "Rendering page",
+    "Resources": "Resources page",
+    "NotFound": "Page not found"
+  }
+}
