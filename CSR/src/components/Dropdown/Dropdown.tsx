@@ -35,7 +35,7 @@ export const Dropdown = ({ trigger, items }: DropdownProps) => {
       <button onClick={handleToggle} className="dropdown-trigger">
         {trigger}
       </button>
-      {isOpen && (
+      {!isOpen && (
         <ul className={styles['dropdown-menu']}>
           {items.map((item, index) => (
             <li key={index} className={styles['dropdown-menu__item']}>

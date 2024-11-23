@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
-import { router } from '../../pages';
-import { Dropdown } from '../../components';
+import { router } from 'pages';
+import { Dropdown } from 'components';
 
 export const Header = () => {
   const ROUTES = router.routes[0].children;
@@ -31,7 +31,7 @@ export const Header = () => {
             >
               {route.id}
             </Link>
-          ),
+          )
         )}
       </nav>
     </header>

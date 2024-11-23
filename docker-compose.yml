@@ -4,16 +4,6 @@ networks:
     external: true
 
 services:
-  ui-kit:
-    build:
-      context: .
-      dockerfile: ./UI/Dockerfile
-    working_dir: /app
-    volumes:
-      - ./UI:/app
-      - /app/node_modules
-    networks:
-      - bachelor-network
 
   next:
     build:
@@ -21,12 +11,10 @@ services:
     working_dir: /app
     volumes:
       - ./SSR:/app
-      - /app/node_modules
     ports:
-      - '3000:3000'
+      - "3000:3000"
     depends_on:
       - backend
-      - ui-kit
     networks:
       - bachelor-network
     environment:
@@ -38,16 +26,15 @@ services:
     working_dir: /app
     volumes:
       - ./CSR:/app
-      - /app/node_modules
     ports:
-      - '3001:3001'
+      - "3001:3001"
     depends_on:
       - backend
-      - ui-kit
     networks:
       - bachelor-network
     environment:
       - REACT_APP_API_URL=http://backend:5015
+      - NODE_ENV=development
 
   backend:
     build:
@@ -55,9 +42,8 @@ services:
     working_dir: /app
     volumes:
       - ./BE:/app
-      - /app/node_modules
     ports:
-      - '5015:5015'
+      - "5015:5015"
     depends_on:
       - mongodb
     networks:
@@ -69,13 +55,13 @@ services:
   mongodb:
     image: mongo:5
     ports:
-      - '27017:27017'
+      - "27017:27017"
     volumes:
       - mongodb_data:/data/db
     networks:
       - bachelor-network
     healthcheck:
-      test: ['CMD', 'mongo', '--eval', "db.adminCommand('ping')"]
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
       interval: 30s
       timeout: 10s
       retries: 5

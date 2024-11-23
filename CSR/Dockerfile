@@ -7,9 +7,9 @@ COPY package.json ./
 
 RUN npm install -g pnpm
 
-RUN pnpm install
-
 COPY . .
+
+RUN pnpm install --frozen-lockfile 
 
 EXPOSE 3001
 

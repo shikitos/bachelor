@@ -1,11 +1,9 @@
-import { Link } from 'react-router-dom';
-import { Button } from 'ui';
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
     <main>
       <h1>Bachelor Project</h1>
-      <Button>Click me</Button>
       <section>
         <h2>Available Pages</h2>
         <ul>
@@ -33,9 +31,7 @@ export const Home = () => {
                 <Link to="/ux/interaction">Время отклика на действия</Link>
               </li>
               <li>
-                <Link to="/ux/dynamic-loading">
-                  Динамическая загрузка компонентов
-                </Link>
+                <Link to="/ux/dynamic-loading">Динамическая загрузка компонентов</Link>
               </li>
             </ul>
           </li>
