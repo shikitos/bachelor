@@ -5,15 +5,8 @@ import { Home } from './Home';
 import { Layout } from './Layout';
 import { NotFound } from './NotFound';
 import {
-  Animations,
-  ClientCalculations,
-  ComplexForms,
-  DynamicContent,
-  HeavyJSBundles,
-  ImageLoad,
-  InteractiveMedia,
-  LargeDOM,
-  PerformanceLayout,
+    Animations, Dashboard, DynamicContent, ImageLoad, InfiniteScroll, InteractiveMedia, LargeDOM,
+    PerformanceLayout, Search, WebSockets
 } from './Performance';
 import { Resources } from './Resources';
 import { Indexing, Ranking } from './SEO';
@@ -39,26 +32,30 @@ export const router = createBrowserRouter([
             element: <Animations />,
           },
           {
-            path: 'client-calculations',
-            id: 'ClientCalculations',
-            element: <ClientCalculations />,
+            path: 'infinite-scroll',
+            id: 'InfiniteScroll',
+            element: <InfiniteScroll />,
           },
           {
-            path: 'complex-forms',
-            id: 'ComplexForms',
-            element: <ComplexForms />,
+            path: 'search',
+            id: 'Search',
+            element: <Search />,
+          },
+          {
+            path: 'dashboard',
+            id: 'Dashboard',
+            element: <Dashboard />,
+          },
+          {
+            path: 'web-sockets',
+            id: 'WebSockets',
+            element: <WebSockets />,
           },
           {
             path: 'dynamic-content',
             id: 'DynamicContent',
             element: <DynamicContent />,
           },
-          {
-            path: 'heavy-js-bundles',
-            id: 'HeavyJSBundles',
-            element: <HeavyJSBundles />,
-          },
-
           {
             path: 'image-load',
             id: 'ImageLoad',

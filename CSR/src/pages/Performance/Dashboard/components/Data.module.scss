@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  &-datasets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 24px;
+    &__item {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      gap: 12px;
+      border-bottom: 1px solid #e0e0e0;
+      &:last-child {
+        border-bottom: none;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #000;
+        label {
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: #e0e0e0;
+        }
+
+        .data {
+          &__inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            gap: 6px;
+            input {
+              border-radius: 4px;
+              background: transparent;
+              border: 1px solid #e0e0e0;
+              padding: 4px;
+              outline: none;
+            }
+          }
+          &__add {
+            height: 25.5px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  .labels {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 12px;
+    &__inputs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      gap: 6px;
+      input {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}

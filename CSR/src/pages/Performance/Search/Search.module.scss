@@ -1,0 +1,62 @@
+/* SearchPage.module.scss */
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.loading {
+  text-align: center;
+  color: #007bff;
+}
+
+.error {
+  text-align: center;
+  color: #dc3545;
+}
+
+.resultsList {
+  list-style: none;
+  padding: 0;
+}
+
+.resultItem {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.resultItem h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+}
+
+.resultItem p {
+  margin: 0;
+  color: #555;
+}
+
+.noResults {
+  text-align: center;
+  color: #555;
+}

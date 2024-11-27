@@ -26,7 +26,7 @@ export const Animations = () => {
           color: `hsl(${Math.random() * 360}, 70%, 70%)`,
         }))
       );
-    }, 3000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
