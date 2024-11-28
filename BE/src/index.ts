@@ -1,15 +1,18 @@
 import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
+import process from "process";
 
-import router from "./routes/postRoutes";
+import metricsRouter from "./routes/metricsRoutes";
+import postRouter from "./routes/postRoutes";
 
 const app = express();
 const port = process.env.PORT || 5015;
 app.use(cors());
-
 app.use(express.json());
-app.use("/api/posts", router);
+
+app.use("/api/posts", postRouter);
+app.use("/api/metrics", metricsRouter);
 
 mongoose
   .connect(process.env.MONGODB_URI)

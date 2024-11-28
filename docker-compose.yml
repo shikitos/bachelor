@@ -58,14 +58,9 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongodb_data:/data/db
+      - bachelor_mongodb_data:/data/db
     networks:
       - bachelor-network
-    healthcheck:
-      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
 
 volumes:
-  mongodb_data:
+  bachelor_mongodb_data:

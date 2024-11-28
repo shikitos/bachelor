@@ -1,1 +1,2 @@
-export * from './postController';
+export * from "./metricsController";
+export * from "./postController";

@@ -1,0 +1,38 @@
+.container {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  color: #00e676;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+
+  .select {
+    width: 300px;
+  }
+}
+
+.chart {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.noData {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ff4081;
+}
