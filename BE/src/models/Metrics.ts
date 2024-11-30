@@ -3,7 +3,6 @@ import mongoose, { Document, Schema } from "mongoose";
 export enum Metrics {
   FCP = "FCP",
   LCP = "LCP",
-  CLS = "CLS",
   FID = "FID",
   TTFB = "TTFB",
 }

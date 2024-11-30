@@ -1,7 +1,7 @@
 import { api } from 'api';
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { onCLS, onFCP, onFID, onLCP, onTTFB } from 'web-vitals';
+import { onFCP, onFID, onLCP, onTTFB } from 'web-vitals';
 
 type Metrics = {
   name: string;
@@ -9,7 +9,6 @@ type Metrics = {
 };
 
 const METRICS = [
-  { name: 'CLS' },
   { name: 'FCP' },
   { name: 'FID' },
   { name: 'LCP' },
@@ -19,6 +18,7 @@ const METRICS = [
 export const useMetrics = () => {
   const [metrics, setMetrics] = useState<Metrics[]>(METRICS);
   const { pathname } = useLocation();
+  const location = useLocation();
   const postedMetricsRef = useRef(new Set<string>());
 
   async function postMetrics(metrics: Metrics) {
@@ -52,12 +52,11 @@ export const useMetrics = () => {
       );
     };
 
-    onCLS(handleMetric);
     onFID(handleMetric);
     onLCP(handleMetric);
     onFCP(handleMetric);
     onTTFB(handleMetric);
-  }, [pathname]);
+  }, [location]);
 
   return {
     metrics,

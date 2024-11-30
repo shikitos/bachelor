@@ -6,6 +6,7 @@ import styles from './Home.module.scss';
 
 export const Home = () => {
   const { t } = useTranslation();
+
   const ROUTES = router.routes[0];
   return (
     <section className={styles.home}>

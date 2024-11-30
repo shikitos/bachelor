@@ -7,13 +7,13 @@ const generateSquares = (count: number) => {
     id: index,
     left: Math.random() * 90 + '%',
     top: Math.random() * 90 + '%',
-    size: Math.random() * 40 + 20 + 'px',
+    size: Math.random() * 20 + 5 + 'px',
     color: `hsl(${Math.random() * 360}, 70%, 70%)`,
   }));
 };
 
 export const Animations = () => {
-  const [squares, setSquares] = useState(generateSquares(100));
+  const [squares, setSquares] = useState(generateSquares(200));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,7 +22,7 @@ export const Animations = () => {
           ...square,
           left: Math.random() * 90 + '%',
           top: Math.random() * 90 + '%',
-          size: Math.random() * 40 + 20 + 'px',
+          size: Math.random() * 20 + 5 + 'px',
           color: `hsl(${Math.random() * 360}, 70%, 70%)`,
         }))
       );
