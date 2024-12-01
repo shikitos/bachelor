@@ -1,23 +1,23 @@
 import styles from '../Fonts.module.scss';
-import { GOOGLE_FONTS } from '../constants';
 import { getRandomTextFragment } from '../libs';
 
 type Props = {
-  googleFontIndex: number;
+  font: string;
   index: number;
+  isGoogleFont: boolean;
 };
 
-export const FontBlock = ({ index, googleFontIndex }: Props) => {
+export const FontBlock = ({ index, font, isGoogleFont }: Props) => {
   return (
     <div
       key={index}
       style={{
-        fontFamily: `${GOOGLE_FONTS[googleFontIndex]}, sans-serif`,
+        fontFamily: `${font}, sans-serif`,
       }}
       className={styles.item}
     >
       <h3 className={styles.item__header} style={{ fontFamily: 'Roboto' }}>
-        Current font family: {GOOGLE_FONTS[googleFontIndex]}
+        Current {isGoogleFont ? 'google font' : 'local font'}: {font}
       </h3>
       <p className={styles.item__paragraph}>
         Paragraph: {getRandomTextFragment(index)}

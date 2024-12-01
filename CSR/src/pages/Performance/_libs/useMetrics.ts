@@ -13,12 +13,14 @@ const METRICS = [
   { name: 'FID' },
   { name: 'LCP' },
   { name: 'TTFB' },
+  { name: 'domInteractive' },
+  { name: 'loadEventEnd' },
+  { name: 'domContentLoadedEventEnd' },
 ];
 
 export const useMetrics = () => {
   const [metrics, setMetrics] = useState<Metrics[]>(METRICS);
   const { pathname } = useLocation();
-  const location = useLocation();
   const postedMetricsRef = useRef(new Set<string>());
 
   async function postMetrics(metrics: Metrics) {
@@ -40,8 +42,7 @@ export const useMetrics = () => {
   }
 
   useEffect(() => {
-    setMetrics(METRICS);
-    const handleMetric = async (metric: { name: string; value: number }) => {
+    const handleMetric = (metric: { name: string; value: number }) => {
       postMetrics(metric);
       setMetrics((prevMetrics) =>
         prevMetrics.map((m) =>
@@ -56,7 +57,19 @@ export const useMetrics = () => {
     onLCP(handleMetric);
     onFCP(handleMetric);
     onTTFB(handleMetric);
-  }, [location]);
+
+    const navTiming = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
+    if (!navTiming) return;
+    console.log({ navTiming });
+    handleMetric({ name: 'domInteractive', value: navTiming.domInteractive });
+    handleMetric({ name: 'loadEventEnd', value: navTiming.loadEventEnd });
+    handleMetric({
+      name: 'domContentLoadedEventEnd',
+      value: navTiming.domContentLoadedEventEnd,
+    });
+  }, [pathname]);
 
   return {
     metrics,

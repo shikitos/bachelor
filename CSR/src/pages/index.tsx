@@ -17,6 +17,7 @@ import {
 } from './Performance';
 import { Resources } from './Resources';
 import { DynamicLoading, Interaction } from './UX';
+import { Info } from './Info';
 
 export const router = createBrowserRouter(
   [
@@ -111,6 +112,11 @@ export const router = createBrowserRouter(
           path: '/resources',
           id: 'Resources',
           element: <Resources />,
+        },
+        {
+          path: '/info',
+          id: 'Info',
+          element: <Info />,
         },
         {
           path: '*',
