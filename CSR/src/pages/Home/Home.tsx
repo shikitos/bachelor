@@ -11,13 +11,10 @@ export const Home = () => {
   return (
     <section className={styles.home}>
       <h1 className={styles.home__title}>{t('home.title')}</h1>
-      <div className={styles['home-content']}>
-        <h2 className={styles['home-content__subtitle']}>
-          {t('home.subtitle')}
-        </h2>
-        <nav className={styles['home-content__nav']}>
-          <ul className={styles.routes}>
-            {ROUTES.children?.map((route) => (
+      <nav className={styles['home-content__nav']}>
+        <ul className={styles.routes}>
+          {ROUTES.children?.map((route) =>
+            route.children ? (
               <li key={route.id} className={styles['routes-route']}>
                 <h3 className={styles['routes-route__name']}>
                   {t(`routes.${route.id}`)}
@@ -35,10 +32,10 @@ export const Home = () => {
                   ))}
                 </ul>
               </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+            ) : null
+          )}
+        </ul>
+      </nav>
     </section>
   );
 };

@@ -1,7 +1,6 @@
 {
   "home": {
-    "title": "Domovská stránka",
-    "subtitle": "Vítejte na domovské stránce"
+    "title": "Seznam testovacích stránek"
   },
   "routes": {
     "Home": "Vítejte na domovské stránce",

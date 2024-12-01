@@ -13,6 +13,7 @@ import {
   LargeDOM,
   PerformanceLayout,
   Search,
+  Fonts,
 } from './Performance';
 import { Resources } from './Resources';
 import { DynamicLoading, Interaction } from './UX';
@@ -46,6 +47,11 @@ export const router = createBrowserRouter(
               path: 'search',
               id: 'Search',
               element: <Search />,
+            },
+            {
+              path: 'fonts',
+              id: 'Fonts',
+              element: <Fonts />,
             },
             {
               path: 'dashboard',

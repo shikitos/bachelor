@@ -11,3 +11,4 @@ export * from './LargeDOM';
 export * from './Layout';
 export * from './Search';
 export * from './WebSockets';
+export * from './Fonts';

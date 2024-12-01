@@ -1,7 +1,6 @@
 {
   "home": {
-    "title": "Home",
-    "subtitle": "Welcome to the Home page"
+    "title": "List of testing pages"
   },
   "routes": {
     "Home": "Welcome to the Home page",
