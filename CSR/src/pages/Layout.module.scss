@@ -4,6 +4,7 @@
   height: 100svh;
   width: 100%;
   .main {
+    scrollbar-gutter: stable;
     overflow-y: auto;
     padding: 20px;
     width: 100%;

@@ -14,8 +14,8 @@ const METRICS = [
   { name: 'LCP' },
   { name: 'TTFB' },
   { name: 'domInteractive' },
-  { name: 'loadEventEnd' },
-  { name: 'domContentLoadedEventEnd' },
+  { name: 'loadEnd' },
+  { name: 'domContentLoadedEnd' },
 ];
 
 export const useMetrics = () => {
