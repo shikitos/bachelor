@@ -12,3 +12,4 @@ export * from './Layout';
 export * from './Search';
 export * from './WebSockets';
 export * from './Fonts';
+export * from './WebGL';

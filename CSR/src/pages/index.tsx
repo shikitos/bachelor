@@ -14,6 +14,7 @@ import {
   PerformanceLayout,
   Search,
   Fonts,
+  WebGL,
 } from './Performance';
 import { Resources } from './Resources';
 import { DynamicLoading, Interaction } from './UX';
@@ -48,6 +49,11 @@ export const router = createBrowserRouter(
               path: 'search',
               id: 'Search',
               element: <Search />,
+            },
+            {
+              path: 'webgl',
+              id: 'WebGL',
+              element: <WebGL />,
             },
             {
               path: 'fonts',
