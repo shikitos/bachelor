@@ -23,7 +23,7 @@ export const Home = () => {
                   {route.children?.map((child, index) => (
                     <li key={index} className={styles.subroute}>
                       <Link
-                        to={`${route.path}/${child.path}`}
+                        to={`${route.path}/${child.path?.replace('/*', '')}`}
                         className={styles.subroute__link}
                       >
                         {t(`routes.${child.id}`)}

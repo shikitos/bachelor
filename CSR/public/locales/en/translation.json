@@ -13,6 +13,8 @@
     "ClientCalculations": "Client-side calculations page",
     "ComplexForms": "Complex forms page",
     "DynamicContent": "Dynamic content page",
+    "Fonts": "Fonts page",
+    "WebGL": "WebGL page",
     "HeavyJSBundles": "Heavy JavaScript bundles page",
     "ImageLoad": "Image loading page",
     "InteractiveMedia": "Interactive media page",

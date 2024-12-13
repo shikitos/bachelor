@@ -17,7 +17,7 @@ export const Header = () => {
               items={route.children.map((child) => (
                 <Link
                   key={index}
-                  to={`${route.path}/${child.path}`}
+                  to={`${route.path}/${child.path?.replace('/*', '')}`}
                   className={styles['header-nav__link']}
                 >
                   {child.id}

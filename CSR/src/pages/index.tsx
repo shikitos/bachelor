@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Caching, Rendering } from './Data';
+import { Caching, NestedRoutes, Rendering } from './Data';
 import { Home } from './Home';
 import { Layout } from './Layout';
 import { NotFound } from './NotFound';
@@ -83,22 +83,6 @@ export const router = createBrowserRouter(
           ],
         },
         {
-          path: '/ux',
-          id: 'UX',
-          children: [
-            {
-              path: 'interaction',
-              id: 'Interaction',
-              element: <Interaction />,
-            },
-            {
-              path: 'dynamic-loading',
-              id: 'DynamicLoading',
-              element: <DynamicLoading />,
-            },
-          ],
-        },
-        {
           path: '/data',
           id: 'Data',
           children: [
@@ -111,6 +95,11 @@ export const router = createBrowserRouter(
               path: 'rendering',
               id: 'Rendering',
               element: <Rendering />,
+            },
+            {
+              path: 'nested-routes/*',
+              id: 'NestedRoutes',
+              element: <NestedRoutes />,
             },
           ],
         },

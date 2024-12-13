@@ -13,6 +13,8 @@
     "HeavyJSBundles": "Stránka s velkými JavaScriptovými balíčky",
     "ImageLoad": "Stránka s načítáním obrázků",
     "InteractiveMedia": "Stránka s interaktivními médii",
+    "Fonts": "Stránka s písmy",
+    "WebGL": "Stránka s WebGL",
     "LargeDOM": "Stránka s velkým DOM",
     "UX": "Stránky týkající se uživatelské zkušenosti",
     "Interaction": "Stránka s interakcí",
